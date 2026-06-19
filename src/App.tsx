@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { getCoordinates, getWeather } from './services/weatherService';
 import { WeatherCard } from './components/WeatherCard/WeatherCard';
-import { WeatherData } from './types/weather';
+import type { WeatherData } from './types/weather';
 
-function App() {
+export default function App() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [history, setHistory] = useState<string[]>([]);
