@@ -1,11 +1,7 @@
-import styles from './WeatherCard.module.css';
 import type { WeatherData } from '../../types/weather';
+import styles from './WeatherCard.module.css';
 
-interface Props {
-  data: WeatherData;
-}
-
-export const WeatherCard = ({ data }: Props) => (
+export const WeatherCard = ({ data }: { data: WeatherData }) => (
   <div className={styles.card}>
     <h2>{data.name}</h2>
     <p>Температура: {data.temp}°C</p>
